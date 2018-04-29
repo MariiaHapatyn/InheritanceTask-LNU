@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 namespace InheritanceTask {
     public class Circle:Figure
     {
+        private double radius;
+
         public double Radius
         {
-            get { return Radius; }
+            get { return radius; }
             set 
             {
                 if(value < 0)
                 {
                     throw new ArgumentException("Radius must be positive!");
                 }
-                Radius = value;
+                radius = value;
             }
         }
 

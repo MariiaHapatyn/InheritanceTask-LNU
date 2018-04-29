@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 namespace InheritanceTask {
     public class Parallelepiped:Rectangle
     {
+        private double height;
+
         public double Height
         {
-            get { return Height; }
+            get { return height; }
             set
             {
                 if( value <= 0 )
                 {
                     throw new ArgumentException("Height must be positive!");
                 }
-                Height = value;
+                height = value;
             }
         }
 

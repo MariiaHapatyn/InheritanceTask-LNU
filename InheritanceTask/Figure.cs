@@ -16,6 +16,8 @@ namespace InheritanceTask {
     }
     public abstract class Figure
     {
+        private double contourWidth;
+
         public Colour ContourColour { get; set; }
         public Colour FillingColour { get; set; }
 
@@ -23,7 +25,7 @@ namespace InheritanceTask {
         {
             get
             {
-                return ContourWidth;
+                return contourWidth;
             }
             set
             {
@@ -31,7 +33,7 @@ namespace InheritanceTask {
                 {
                     throw new ArgumentException("Contour width can't be negative!");
                 }
-                ContourWidth = value;
+                contourWidth = value;
             }
         }
 

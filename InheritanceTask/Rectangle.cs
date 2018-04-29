@@ -7,29 +7,32 @@ using System.Threading.Tasks;
 namespace InheritanceTask {
     public class Rectangle: Figure
     {
+        private double width;
+        private double length;
+
         public double Width
         {
-            get { return Width; }
+            get { return width; }
             set
             {
                 if( value <= 0 )
                 {
                     throw new ArgumentException("Width must be positive!");
                 }
-                Width = value;
+                width = value;
             }
         }
 
         public double Length
         {
-            get { return Length; }
+            get { return length; }
             set
             {
                 if( value <= 0 )
                 {
                     throw new ArgumentException("Length must be positive!");
                 }
-                Length = value;
+                length = value;
             }
         }
 
