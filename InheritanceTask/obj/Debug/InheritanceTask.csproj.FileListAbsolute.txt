@@ -1,0 +1,1 @@
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\bin\Debug\InheritanceTask.exe.config
