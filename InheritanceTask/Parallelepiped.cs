@@ -5,39 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    class Parallelepiped:Rectangle {
-        private double length;
-        public double Length {
-            get { return length; }
-            set {
-                if( value <= 0 ) {
-                    Console.WriteLine( "length must be positive!" );
-                }
-                length = value;
-            }
-        }
-
-        public Parallelepiped () { }
-
-        public Parallelepiped(double length ) 
+    public class Parallelepiped:Rectangle
+    {
+        public double Height
+        {
+            get { return Height; }
+            set
             {
-                this.Length = length;
+                if( value <= 0 )
+                {
+                    throw new ArgumentException("Height must be positive!");
+                }
+                Height = value;
             }
-        public override void Print () {
-            Console.WriteLine( "Parallelepiped:" );
-            base.Print();
-            Console.WriteLine( $"Length{Length}" );
-            Console.WriteLine( $"Width:{Width}" );
-            Console.WriteLine( $"Height:{Height}" );
-        }
-        public double objem () {
-            double objem = Length * Width * Height;
-            return objem;
-        }
-        public override double Area () {
-            double area = 2 * ( Length * Width + Width * Height + Length * Height );
-            return area;
         }
 
+        public Parallelepiped(Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0, double w = 0.0, double l = 0.0, double h = 0.0) : base(cc, fc, cw, w, l)
+        {
+                Height = h;
         }
+
+        public override void Print()
+        {
+            Console.WriteLine( "Parallelepiped: ");
+            base.Print();
+            Console.WriteLine( $"Height : {Height}");
+        }
+
+        public double Volume()
+        {
+            double result = Height * Width * Length;
+            return result;
+        }
+
+        public override double Area()
+        {
+            double result = 2 * (Height * Width + Width * Length + Height * Length );
+            return result;
+        }
+    }
 }

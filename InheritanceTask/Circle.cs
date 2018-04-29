@@ -5,39 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    class Circle:Figure {
-        private double r;
-
-        public double R
+    public class Circle:Figure
+    {
+        public double Radius
         {
-            get { return r; }
+            get { return Radius; }
             set 
             {
-                if( value < 0 )
-                    {
-                        Console.WriteLine( "Radius must be positive!" );
-                    }
-                  r = value;
+                if(value < 0)
+                {
+                    throw new ArgumentException("Radius must be positive!");
+                }
+                Radius = value;
             }
-       }
-        
-        public Circle () {  }
-
-        public Circle ( double r ) {
-            this.R = r;
         }
-        public override void Print () {
-            Console.WriteLine( "Circle:" );
-           // base.Print();
-            Console.WriteLine( $"Radius :{R}"  );
+
+        public Circle (Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0, double r = 0.0) : base(cc, fc, cw)
+        {
+            Radius = r;
+        }
+
+        public override void Print ()
+        {
+            Console.WriteLine("Circle: ");
+            base.Print();
+            Console.WriteLine($"Radius : {Radius}, Area : {Area()}, Perimeter : {Perimeter()}");
         }
 
         public override double Area () {
-            double result = 3.14 * R * R;
+            double result = Math.PI * Radius * Radius;
             return result;
         }
+
         public override double Perimeter() {
-            double result = 3.14 * 2 * R;
+            double result = Math.PI * 2 * Radius;
             return result;
         }
     }

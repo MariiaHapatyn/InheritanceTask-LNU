@@ -5,38 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    class Сylinder:Circle {
-        private double height;
-        public double Height {
-            get { return height; }
-            set {
-                if( value <= 0 ) {
-                    Console.WriteLine( "height must be positive!" );
-                }
-                height = value;
-            }
-        }
-
-        public Сylinder () { }
-
-        public Сylinder ( double height ) 
+    public class Сylinder:Circle
+    {
+        public double Height
+        {
+            get { return Height; }
+            set
             {
-                this.Height = height;
+                if( value <= 0 )
+                {
+                    throw new ArgumentException("Height must be positive!");
+                }
+                Height = value;
             }
-        public override void Print () {
-            Console.WriteLine( "Сylinder:" );
-            base.Print();
-            Console.WriteLine( $"Radius:{R}" );
-            Console.WriteLine( $"Height:{Height}" );
         }
-        public double objem() {
-            double objem = 3.14 * R * R * Height;
-            return objem;
+        
+        public Сylinder(Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0, double r = 0.0, double h = 0.0) : base(cc, fc, cw, r)
+        {
+            Height = h;
         }
 
-        public override double Area () {
-            double Sf = 2 * 3.14 * R * ( Height + R );
-            return Sf;
+        public override void Print()
+        {
+            Console.WriteLine("Сylinder: ");
+            base.Print();
+            Console.WriteLine( $"Height : {Height}");
+        }
+
+        public double Volume()
+        {
+            double result = Math.PI * Radius * Radius * Height;
+            return result;
+        }
+
+        public override double Area()
+        {
+            double result = 2 * Math.PI * Radius * ( Height + Radius);
+            return result;
         }
       
     }
