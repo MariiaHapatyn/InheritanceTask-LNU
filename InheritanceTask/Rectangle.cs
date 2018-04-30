@@ -46,7 +46,7 @@ namespace InheritanceTask {
         {
             Console.WriteLine("Rectangle: ");
             base.Print();
-            Console.WriteLine($"Width : {Width}, Length : {Length}");
+            Console.WriteLine($" Width : {Width}\n Length : {Length}");
         }
 
         public override double Perimeter () {

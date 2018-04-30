@@ -1,0 +1,7 @@
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\bin\Debug\InheritanceTaskUnitTest.dll
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\bin\Debug\InheritanceTaskUnitTest.pdb
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\bin\Debug\InheritanceTask.exe
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\bin\Debug\InheritanceTask.pdb
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\obj\Debug\InheritanceTaskUnitTest.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\obj\Debug\InheritanceTaskUnitTest.dll
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTaskUnitTest\obj\Debug\InheritanceTaskUnitTest.pdb

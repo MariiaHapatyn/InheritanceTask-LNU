@@ -46,7 +46,7 @@ namespace InheritanceTask {
         
         public virtual void Print()
         {
-            Console.WriteLine( $"ContourWidth : {ContourWidth}, ContourColour : {ContourColour}, FillingColour : {FillingColour}");
+            Console.WriteLine( $" ContourWidth : {ContourWidth}\n ContourColour : {ContourColour}\n FillingColour : {FillingColour}");
         }
         
         public abstract double Perimeter ();

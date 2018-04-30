@@ -1,7 +1,6 @@
 D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\bin\Debug\InheritanceTask.exe.config
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\bin\Debug\InheritanceTask.exe.config
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\obj\Debug\InheritanceTask.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\bin\Debug\InheritanceTask.exe
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\bin\Debug\InheritanceTask.pdb
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\obj\Debug\InheritanceTask.exe
-C:\Users\Admin\Documents\Visual Studio 2015\Projects\4семестр\InheritanceTask-LNU\InheritanceTask\obj\Debug\InheritanceTask.pdb
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\bin\Debug\InheritanceTask.exe
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\bin\Debug\InheritanceTask.pdb
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\obj\Debug\InheritanceTask.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\obj\Debug\InheritanceTask.exe
+D:\Visual Studio Projects\Visual C#\InheritanceTask\InheritanceTask\obj\Debug\InheritanceTask.pdb

@@ -31,7 +31,7 @@ namespace InheritanceTask {
         {
             Console.WriteLine("Сylinder: ");
             base.Print();
-            Console.WriteLine( $"Height : {Height}");
+            Console.WriteLine( $" Height : {Height}");
         }
 
         public double Volume()

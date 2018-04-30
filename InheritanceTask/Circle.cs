@@ -31,7 +31,7 @@ namespace InheritanceTask {
         {
             Console.WriteLine("Circle: ");
             base.Print();
-            Console.WriteLine($"Radius : {Radius}, Area : {Area()}, Perimeter : {Perimeter()}");
+            Console.WriteLine($" Radius : {Radius}\n Area : {Area()}\n Perimeter : {Perimeter()}");
         }
 
         public override double Area () {
