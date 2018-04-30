@@ -5,38 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    class Сylinder:Circle {
+    public class Сylinder:Circle
+    {
         private double height;
-        public double Height {
+
+        public double Height
+        {
             get { return height; }
-            set {
-                if( value <= 0 ) {
-                    Console.WriteLine( "height must be positive!" );
+            set
+            {
+                if( value <= 0 )
+                {
+                    throw new ArgumentException("Height must be positive!");
                 }
                 height = value;
             }
         }
+        
+        public Сylinder(Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0, double r = 0.0, double h = 0.0) : base(cc, fc, cw, r)
+        {
+            Height = h;
+        }
 
-        public Сylinder () { }
-
-        public Сylinder ( double height ) 
-            {
-                this.Height = height;
-            }
-        public override void Print () {
-            Console.WriteLine( "Сylinder:" );
+        public override void Print()
+        {
+            Console.WriteLine("Сylinder: ");
             base.Print();
-            Console.WriteLine( $"Radius:{R}" );
-            Console.WriteLine( $"Height:{Height}" );
-        }
-        public double objem() {
-            double objem = 3.14 * R * R * Height;
-            return objem;
+            Console.WriteLine( $"Height : {Height}");
         }
 
-        public override double Area () {
-            double Sf = 2 * 3.14 * R * ( Height + R );
-            return Sf;
+        public double Volume()
+        {
+            double result = Math.PI * Radius * Radius * Height;
+            return result;
+        }
+
+        public override double Area()
+        {
+            double result = 2 * Math.PI * Radius * ( Height + Radius);
+            return result;
         }
       
     }

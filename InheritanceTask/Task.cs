@@ -22,6 +22,13 @@ namespace InheritanceTask {
             }
             Console.WriteLine( $"Total Perimeter  is : {result}" );
         }
-        
+
+        public static void PrintAllFigures(List<Figure> figures)
+        {
+            foreach(var figure in figures)
+            {
+                figure.Print();
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    enum Colour {
+    public enum Colour {
         Black,
         White,
         Green,
@@ -14,25 +14,43 @@ namespace InheritanceTask {
         Pink,
         Blue
     }
-    abstract class Figure {
+    public abstract class Figure
+    {
         private double contourWidth;
-        public double ContourWidth {
-            get { return contourWidth; }
-            set {
-                if( value < 0 ) 
+
+        public Colour ContourColour { get; set; }
+        public Colour FillingColour { get; set; }
+
+        public double ContourWidth
+        {
+            get
+            {
+                return contourWidth;
+            }
+            set
+            {
+                if (value < 0)
                 {
-                    Console.WriteLine( "Contour width can't be negative !" );
+                    throw new ArgumentException("Contour width can't be negative!");
                 }
                 contourWidth = value;
             }
         }
 
-        public abstract void Print ();
-    //    {
-    //    Console.WriteLine( $"ContourWidth : {ContourWidth}" );
-    //}
-   // public abstract Colour Pouring ( );
+        protected Figure(Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0)
+        {
+            ContourColour = cc;
+            FillingColour = fc;
+            ContourWidth = cw;
+        }
+        
+        public virtual void Print()
+        {
+            Console.WriteLine( $"ContourWidth : {ContourWidth}, ContourColour : {ContourColour}, FillingColour : {FillingColour}");
+        }
+        
         public abstract double Perimeter ();
         public abstract double Area ();
     }
 }
+

@@ -5,71 +5,57 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InheritanceTask {
-    class Rectangle: Figure {
+    public class Rectangle: Figure
+    {
         private double width;
-        private double height;
-        public double Width {
+        private double length;
+
+        public double Width
+        {
             get { return width; }
-            set {
-                if( value <= 0 ) {
-                    Console.WriteLine( "width must be positive!" );
+            set
+            {
+                if( value <= 0 )
+                {
+                    throw new ArgumentException("Width must be positive!");
                 }
                 width = value;
             }
         }
-        public double Height {
-            get { return height; }
-            set {
-                if( value <= 0 ) {
-                    Console.WriteLine( "height must be positive!" );
+
+        public double Length
+        {
+            get { return length; }
+            set
+            {
+                if( value <= 0 )
+                {
+                    throw new ArgumentException("Length must be positive!");
                 }
-                height = value;
+                length = value;
             }
         }
 
-        public Rectangle() { }
-
-        public Rectangle ( double width, double height ) {
-            this.Width = width;
-            this.Height = height;
+        public Rectangle (Colour cc = Colour.Black, Colour fc = Colour.Black, double cw = 0.0, double w = 0.0, double l = 0.0) : base(cc, fc, cw)
+        {
+            Width = w;
+            Length = l;
         }
-        //public override void Pouring ( Colour col ) {
-        //   string result = "";
 
-        //    switch( col ) {
-        //        case Colour.Black:
-        //            result = "black";
-        //            break;
-        //        case Colour.White:
-        //            result = "White";
-        //            break;
-        //        case Colour.Green:
-        //            result = "Green";
-        //            break;
-        //        case Colour.Yellow:
-        //            result = "Yellow";
-        //            break;
-        //        case Colour.Red:
-        //            result = "Red";
-        //            break;
-        //        case Colour.Pink:
-        //            result = "Pink";
-        //            break;
-        //    }
-        //    Console.WriteLine( "colour of figure is {0}", result );
-        //}
-        public override void Print () {
-            Console.WriteLine( "Rectangle:" );
-         //   base.Print();
-            Console.WriteLine($"Width:{Width}" );
-            Console.WriteLine($"Height:{Height}" );
+        public override void Print ()
+        {
+            Console.WriteLine("Rectangle: ");
+            base.Print();
+            Console.WriteLine($"Width : {Width}, Length : {Length}");
         }
+
         public override double Perimeter () {
-            double result = ( Width + Height) * 2;
+            double result = (Width + Length) * 2;
             return result;
         }
+
         public override double Area () {
-            double result = Width * Height;
+            double result = Width * Length;
             return result;
         }
     }
